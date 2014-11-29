@@ -69,7 +69,7 @@
 		// see if we have a session
 		if ( isset( $session ) ) {
 
-			require_once('resize_image.php');
+			require_once( 'libs/resize_image.php' );
 
 			$_SESSION['fb_login_session'] = $session;
 			$_SESSION['fb_token'] = $session->getToken();
