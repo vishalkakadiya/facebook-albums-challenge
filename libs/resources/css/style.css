@@ -1,0 +1,129 @@
+.center {
+	text-align: center !important;
+}
+
+#thumbnails {
+	margin-left: -30px;
+}
+
+.no-border {
+	border: 0px !important;
+}
+
+.link-buttons {
+	float: left;
+	margin-left: 20px;
+	margin-top: 10%;
+}
+
+.link-buttons-border-color {
+	border-color: #000000 !important;
+}
+
+#display-response {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#download-modal {
+	top: 5% !important;
+}
+
+#albums-div {
+	margin-top: 3%;
+	margin-left: 10px;
+}
+
+#login-div {
+	text-align: center;
+	margin-top: 15%;
+}
+
+#login-link {
+	width: 40%;
+	height: 16%;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 40px;
+}
+
+#download-link {
+	background-color: #993300;
+	margin-top: 2%;
+}
+
+#display-response {
+	margin-top: 20px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.menu-links {
+	margin-bottom: 10px;
+}
+
+#username {
+	color: #ffffff;
+	margin-top: 10px;
+}
+
+#user_photo {
+	margin-top: -20px;
+	margin-right: 10px;
+}
+
+#main-div {
+	margin-top: 110px;
+}
+
+.modal-content {
+	top: 70px;
+}
+
+#loader {
+	top: 50%;
+	width: 50%;
+	left: 25%;
+}
+
+#nav-menu {
+	margin-left: 65px;
+}
+
+@media only screen and (min-width: 300px) {
+	/*.images-div {
+		height: 200px !important;
+		width: 300px !important;
+	}*/
+	
+	.nav li .btn {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/*.images-div {
+		height: 240px !important;
+		width: 300px !important;
+	}*/
+	
+	.nav li .btn {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	/*.images-div {
+		height: 400px !important;
+		width: 300px !important;
+	}*/
+}
+
+@media only screen and (min-width: 1200px) {
+	/*.images-div {
+		height: 350px !important;
+		max-width: 300px !important;
+	}*/
+}
