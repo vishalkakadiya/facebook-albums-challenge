@@ -11,8 +11,8 @@ php:
 # Commands to be run before your environment runs.
 before_script:
   - wget http://getcomposer.org/composer.phar
-  - php composer.phar install
   - composer update --lock
+  - php composer.phar install
 
 
 # Commands you want to run that will verify your build.
