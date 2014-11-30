@@ -12,6 +12,8 @@ php:
 before_script:
   - wget http://getcomposer.org/composer.phar
   - php composer.phar install
+  - composer update --lock
+
 
 # Commands you want to run that will verify your build.
 script: phpunit
