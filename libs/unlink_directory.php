@@ -6,9 +6,9 @@ class unlink_directory {
         foreach (glob("{$directory}/*") as $file) {
             if ( is_dir( $file ) ) { 
                 $this->remove_directory($file);
-    		} else {
-    			unlink($file);
-    		}
+            } else {
+                unlink($file);
+            }
         }
         rmdir($directory);
     }
