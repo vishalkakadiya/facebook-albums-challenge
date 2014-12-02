@@ -67,10 +67,10 @@ function add_new_photo_to_album( $gp, $path, $new_album_name ) {
 	$photo_entry->setSummary( $gp->newSummary( $photo_caption ) );
 
 	// add some tags
-	$photo_keywords = new Zend_Gdata_Media_Extension_MediaKeywords();
-	$photo_keywords->setText( $photo_tags );
+	$photo_media = new Zend_Gdata_Media_Extension_MediaKeywords();
+	$photo_media->setText( $photo_tags );
 	$photo_entry->mediaGroup = new Zend_Gdata_Media_Extension_MediaGroup();
-	$photo_entry->mediaGroup->keywords = $photo_keywords;
+	$photo_entry->mediaGroup->keywords = $photo_media;
 
 	// We use the AlbumQuery class to generate the URL for the album
 	$album_query = $gp->newAlbumQuery();
