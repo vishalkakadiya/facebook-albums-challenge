@@ -86,9 +86,10 @@
 
 	} else {
 
-		if ( isset( $_GET['ajax'] ) )
-			header('location:libs/move_to_picasa.php?ajax=1&album_download_directory='.$album_download_directory);
-		else
-			header('location:libs/move_to_picasa.php?album_download_directory='.$album_download_directory);
+		$redirect = 'location:libs/move_to_picasa.php?album_download_directory='.$album_download_directory;
+		if ( isset( $_GET['ajax'] ) ) {
+			$redirect = $redirect . '&ajax=1';
+		}
+		header($redirect);
 	}
 ?>
