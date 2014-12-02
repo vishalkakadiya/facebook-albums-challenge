@@ -9,13 +9,13 @@ class unlink_directoryTest extends PHPUnit_Framework_TestCase {
         $this->unlink_directory = new unlink_directory();
     }
 
-    function testremove_directory( $directory = null) {
-        $actual = $this->zipper->remove_directory( $directory );
+    function testremove_directory( $directory = null ) {
+        $actual = $this->unlink_directory->remove_directory( $directory );
         $this->assertEquals( $actual, $actual );
     }
 
     protected function tearDown() {
-        unset($this->zipper);
+        unset( $this->unlink_directory );
     }
 
 }
