@@ -27,17 +27,6 @@ function getAuthSubHttpClient() {
 $gp = new Zend_Gdata_Photos(getAuthSubHttpClient(), "Google-DevelopersGuide-1.0");
 $entry = new Zend_Gdata_Photos_AlbumEntry();
 
-function remove_directory($directory) {
-	foreach (glob("{$directory}/*") as $file) {
-		if ( is_dir( $file ) ) { 
-			remove_directory($file);
-		} else {
-			unlink($file);
-		}
-	}
-	rmdir($directory);
-}
-
 
 function add_new_album( $entry, $gp, $album_download_directory, $album_name ) {
 	$new_album_name = str_replace( " ", "_", $album_name );
@@ -107,7 +96,9 @@ if ( isset( $album_download_directory ) ) {
 		}
 
 		$unlink_folder = rtrim( $album_download_directory, "/" );
-		remove_directory( $unlink_folder );
+		require_once('unlink_directory.php');
+		$unlink_directory = new unlink_directory();
+		$unlink_directory->remove_directory( $unlink_folder );
 	}
 	$response = 1;
 } else {
@@ -115,7 +106,7 @@ if ( isset( $album_download_directory ) ) {
 }
 
 
-if ( isset( $_GET['ajax'] ) && ( $_GET['ajax'] == 1 ) )
+if ( isset( $_GET['ajax'] ) )
 	echo $response;
 else
 	header('location:../index.php?response='.$response);
