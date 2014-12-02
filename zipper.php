@@ -140,19 +140,7 @@ class zipper {
 
 		return $memory_limit;
 	}
-	
-	public function remove_directory($directory) {
-		if ( isset( $directory ) ) {
-			foreach(glob("{$directory}/*") as $file) {
-				if(is_dir($file)) { 
-					$this->remove_directory($file);
-				} else {
-					unlink($file);
-				}
-			}
-			rmdir($directory);
-		}
-	}
+
 
 	public function make_zip($album_download_directory) {
 		$zipfilename = "";
@@ -198,7 +186,9 @@ class zipper {
 			// clear the stat cache (created by filesize command)
 			clearstatcache();
 			
-			$this->remove_directory($album_download_directory);
+			require_once('libs/unlink_directory.php');
+			$unlink_directory = new unlink_directory();
+			$unlink_directory->remove_directory( $album_download_directory );
 		}
 		return $zipfilename;
 	}
