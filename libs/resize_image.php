@@ -97,15 +97,15 @@
         $mime = image_type_to_mime_type($info[2]);
         header("Content-type: $mime");
         $output = NULL;
-      break;
+      	break;
       case 'file':
         $output = $file;
-      break;
+      	break;
       case 'return':
         return $image_resized;
-      break;
+      	//break;
       default:
-      break;
+      	break;
     }
     
     # Writing image according to type to the output destination and image quality
