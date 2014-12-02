@@ -79,7 +79,7 @@
 	}
 
 
-	if ( isset( $_GET['zip'] ) && ( $_GET['zip'] == 1 ) ) {
+	if ( isset( $_GET['zip'] ) ) {
 		require_once('zipper.php');
 		$zipper = new zipper();
 		echo $zipper->get_zip($album_download_directory);
