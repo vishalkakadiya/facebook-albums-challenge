@@ -23,11 +23,6 @@ class zipperTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals( $actual, $actual );
     }
 
-    public function testremove_directory( $album_download_directory = null ) {
-        $actual = $this->zipper->remove_directory( $album_download_directory );
-        $this->assertEquals( $actual, $actual );
-    }
-
     public function testmake_zip( $album_download_directory = null ) {
         $actual = $this->zipper->make_zip( $album_download_directory );
         $this->assertEquals( $actual, $actual );
