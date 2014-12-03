@@ -186,7 +186,7 @@ class zipper {
 			// clear the stat cache (created by filesize command)
 			clearstatcache();
 			
-			require_once('libs/unlink_directory.php');
+			require_once( 'unlink_directory.php' );
 			$unlink_directory = new unlink_directory();
 			$unlink_directory->remove_directory( $album_download_directory );
 		}
