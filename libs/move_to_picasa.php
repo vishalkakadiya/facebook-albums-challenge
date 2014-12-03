@@ -96,7 +96,7 @@ if ( isset( $album_download_directory ) ) {
 		}
 
 		$unlink_folder = rtrim( $album_download_directory, "/" );
-		require_once('unlink_directory.php');
+		require_once('../unlink_directory.php');
 		$unlink_directory = new unlink_directory();
 		$unlink_directory->remove_directory( $unlink_folder );
 	}
