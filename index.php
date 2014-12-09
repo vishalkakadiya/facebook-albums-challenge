@@ -75,7 +75,7 @@
 			$_SESSION['fb_token'] = $session->getToken();
 
 			// create a session using saved token or the new one we generated at login
-			//$session = new FacebookSession( $session->getToken() );
+			$session = new FacebookSession( $session->getToken() );
 			
 			$request_user_details = new FacebookRequest( $session, 'GET', '/me?fields=id,name' );
 			$response_user_details = $request_user_details->execute();
